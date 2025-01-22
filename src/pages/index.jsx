@@ -36,18 +36,18 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[{
               title: "Modern Villa",
-              location: "Beverly Hills",
-              price: "$4,500,000",
+              location: "La Molina",
+              price: "$5,500,000",
               image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
             }, {
               title: "Luxury Penthouse",
-              location: "Downtown LA",
-              price: "$3,200,000",
+              location: "Surco",
+              price: "$4,200,000",
               image: "https://plus.unsplash.com/premium_photo-1661913412680-c274b6fea096?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }, {
               title: "Seaside Office",
-              location: "Malibu",
-              price: "$6,800,000",
+              location: "San Isidro",
+              price: "$2,800,000",
               image: "https://plus.unsplash.com/premium_photo-1681487144031-d502ea9abefc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }].map((property, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
