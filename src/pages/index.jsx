@@ -46,7 +46,7 @@ const Index = () => {
               price: "$4,200,000",
               image: "https://plus.unsplash.com/premium_photo-1661913412680-c274b6fea096?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }, {
-              title: "Seaside Office",
+              title: "Downtown Office",
               location: "San Isidro",
               price: "$2,800,000",
               image: "https://plus.unsplash.com/premium_photo-1681487144031-d502ea9abefc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
