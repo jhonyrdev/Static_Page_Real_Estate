@@ -9,13 +9,13 @@ const Index = () => {
       
       {/* Hero Section */}
       <section id="home" 
-         className="relative md:min-h-screen h-[50vh] pt-16 flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
+         className="relative lg:min-h-screen h-[50vh] pt-16 flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container mx-auto px-4 relative text-white text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 animate-fade-in">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-in">
             Find Your Dream Luxury Residences
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 animate-slide-in text-gray-200">
+          <p className="text-lg sm:text-xl lg:text-2xl mb-6 md:mb-8 animate-slide-in text-gray-200">
             Discover exclusive properties in prime locations
           </p>
           <button 
