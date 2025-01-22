@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef(null);
+  const buttonRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +13,22 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const scrollToSection = (sectionId) => {
@@ -22,13 +40,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className={`flex-shrink-0 font-bold text-2xl transition-colors duration-300 ${
-            isScrolled ? 'text-gray-700' : 'text-white'
-          }`}>
-            LuxuryResidences
+          <div
+            className={`flex-shrink-0 font-bold text-2xl transition-colors duration-300 ${
+              isScrolled ? 'text-gray-700' : 'text-white'
+            }`}
+          >
+            LuxuryResidence
           </div>
 
           {/* Desktop Menu */}
@@ -49,6 +73,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              ref={buttonRef}
               onClick={() => setIsOpen(!isOpen)}
               className={`${isScrolled ? 'text-gray-700' : 'text-white'}`}
             >
@@ -59,7 +84,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white">
+          <div ref={menuRef} className="md:hidden bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {['home', 'properties', 'about', 'contact'].map((item) => (
                 <button

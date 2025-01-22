@@ -12,7 +12,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container mx-auto px-4 relative text-white text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Find Your Dream Luxury Home
+            Find Your Dream Luxury Residences
           </h1>
           <p className="text-xl md:text-2xl mb-8 animate-slide-in">
             Discover exclusive properties in prime locations
@@ -43,12 +43,12 @@ const Index = () => {
               title: "Luxury Penthouse",
               location: "Downtown LA",
               price: "$3,200,000",
-              image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+              image: "https://plus.unsplash.com/premium_photo-1661913412680-c274b6fea096?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }, {
-              title: "Seaside Mansion",
+              title: "Seaside Office",
               location: "Malibu",
               price: "$6,800,000",
-              image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+              image: "https://plus.unsplash.com/premium_photo-1681487144031-d502ea9abefc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }].map((property, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <img 
