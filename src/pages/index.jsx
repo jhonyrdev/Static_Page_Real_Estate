@@ -8,18 +8,19 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
+      <section id="home" 
+         className="relative md:min-h-screen h-[50vh] pt-16 flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="container mx-auto px-4 relative text-white text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 animate-fade-in">
             Find Your Dream Luxury Residences
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-slide-in">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 animate-slide-in text-gray-200">
             Discover exclusive properties in prime locations
           </p>
           <button 
             onClick={() => document.getElementById('properties')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gray-800 hover:bg-gray-800/90 text-white px-8 py-3 rounded-full font-semibold flex items-center mx-auto space-x-2 transition-colors"
+            className="bg-cyan-900 hover:bg-cyan-900/70 text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold flex items-center mx-auto space-x-2 transition-colors text-sm md:text-base"
           >
             <span>View Properties</span>
             <ArrowRight size={20} />
